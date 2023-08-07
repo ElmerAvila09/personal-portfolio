@@ -26,14 +26,6 @@ a {
     font-family: inherit;
 }
 
-.description {
-    color: white;
-}
-
-.name{
-    color: white;
-}
-
 body {
     background-color: var(--primary-color) !important;
     font-family: 'Nunito', sans-serif;
@@ -45,9 +37,19 @@ body {
 
 }
 
-
 header {
     height: 100vh;
+}
+
+img{
+    height: 80%;
+    width: 80%;
+    object-fit:contain;
+}
+
+li{
+    text-align: justify;
+    margin-bottom: 8px;
 }
 
 section {
@@ -61,21 +63,13 @@ section {
 
 }
 
+
 .active{
     display: block !important;
     animation: scaleAnim 1s ease-in-out;
     
 }
 
-@keyframes scaleAnim {
-    0%{
-        transform: translateY(-100%) scaleY(0)
-    }
-    100%{
-        transform: translateY(0%) scaleY(1)
-    }
-    
-}
 .active-btn {
     background-color: var(--secondary-color) !important;
     transition: all .4s ease-in-out;
@@ -128,26 +122,50 @@ section {
     z-index: 10;
 }
 
-/* Animation in progress to fade away a desactivated section
-.fade
-    display: block !important;
-    animation: fadeAnim 1s ease-out;
+.description {
+    color: white;
+    text-align: justify;
+}
 
+.h-shape{
+    transition: all .4s ease-in-out;
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
 
-@keyframes fadeAnim 
-    0%{
-        transform: translateY(0%) scaleY(1)
-    }
-    100%{
-        transform: translateY(100%) scaleY(0)
-    }
-    
-*/
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80%;
+}
+
+.left-header{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.name{
+    color: white;
+    text-align: justify;
+    margin-bottom: 25;
+}
 
 .part {
     transform: translateY(-100%) scale(0);
     transition: all .4s ease-in-out;
     background-color: var(--primary-color);
+}
+
+.right-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12rem;
 }
 
 .section1 {
@@ -186,41 +204,44 @@ section {
     text-align: justify;
 }
 
-.header-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100%;
-}
-
-.left-header{
+.warnign {
     display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.right-header{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding-right: 12rem;
+    align-items: center;
+    margin: 20px 100px 0px 100px;
+    /*font-weight: bold;*/
+    
 }
 
-.h-shape{
-    transition: all .4s ease-in-out;
-    width: 65%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+.warnign-bold {
+    margin-right: 20px;
+    
 }
-
-img{
-    height: 80%;
-    width: 80%;
-    object-fit:contain;
-}
-
 
   
+@keyframes scaleAnim {
+    0%{
+        transform: translateY(-100%) scaleY(0)
+    }
+    100%{
+        transform: translateY(0%) scaleY(1)
+    }
+    
+}
+
+/* Animation in progress to fade away a desactivated section
+.fade
+    display: block !important;
+    animation: fadeAnim 1s ease-out;
+
+
+@keyframes fadeAnim 
+    0%{
+        transform: translateY(0%) scaleY(1)
+    }
+    100%{
+        transform: translateY(100%) scaleY(0)
+    }
+    
+*/
  
